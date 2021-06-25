@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-md-6 col-auto">
+  <div class="card">
+    <div class="card-header">
+      Todos
+    </div>
+    <ul class="list-group list-group-flush">
+      {% for i in data %}
+      <li class="list-group-item">{{ i.id }} - Produdo id</li>
+      <li class="list-group-item">{{ i.name }} - Nome</li>
+      <li class="list-group-item">{{ i.description }} - Descrição</li>
+      <li class="list-group-item">{{ i.price }} - Preço</li>
+      <li class="list-group-item">{{ i.category }} - Categoria</li>
+      <div><br>############################################### <br></div>
+      {% endfor %}
+
+      {% for v in venda %}
+      <li class="list-group-item">{{ v.id }} - Vendas id</li>
+      <li class="list-group-item">{{ v.seller_id }} - Seller id </li>
+      <li class="list-group-item">{{ v.buyer_id }} - buyer id</li>
+      <li class="list-group-item">{{ v.marketplace }} - merketplace </li>
+
+      <div><br>################################################### <br></div>
+      <li class="list-group-item">{{ v.product_id }} - Produto id</li>
+      <li class="list-group-item">{{ v.venda_id }} - Venda product _id</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock content %}
